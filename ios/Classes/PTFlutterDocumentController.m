@@ -65,6 +65,7 @@ static BOOL PT_addMethod(Class cls, SEL selector, void (^block)(id))
 
     // bottomToolBar / thumbnailSlider enabling
     self.thumbnailSliderEnabled = ![self isBottomToolbarHidden];
+    self.view.window.screenCaptured = YES;
 }
 
 - (void)viewWillLayoutSubviews
@@ -1939,6 +1940,7 @@ static BOOL PT_addMethod(Class cls, SEL selector, void (^block)(id))
 {
     [super viewWillAppear:animated];
     self.navigationController.toolbarHidden = !self.editingEnabled;
+    self.view.window.screenCaptured = YES;
 }
 
 @end
