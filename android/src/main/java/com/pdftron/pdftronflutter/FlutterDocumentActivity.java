@@ -408,6 +408,11 @@ public class FlutterDocumentActivity extends DocumentActivity implements ViewerC
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getWindow().setFlags(
+            android.view.WindowManager.LayoutParams.FLAG_SECURE,
+            android.view.WindowManager.LayoutParams.FLAG_SECURE
+        );
+
         attachActivity();
     }
 
