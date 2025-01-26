@@ -7,6 +7,7 @@
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [GeneratedPluginRegistrant registerWithRegistry:self];
   // Override point for customization after application launch.
+  [[UIApplication sharedApplication] setAllowsScreenCapture:NO];
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
